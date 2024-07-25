@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make the navbar sticky */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: height 0.3s ease;
+}
+
+/* Default navbar height */
+.header.default {
+  height: 80px; /* Adjust this value as needed */
+}
+
+/* Shrunken navbar height */
+.header.shrink {
+  height: 50px; /* Adjust this value as needed */
+}
+
+
+@media (max-width: 1023px) {
+  .backg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/landback.png');
+    background-size: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Adjust the opacity as needed */
+    z-index: -1; /* Ensure the pseudo-element is behind the text */
+  }
+  .backg1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/daftarimg.png');
+    background-size: 90%;
+    background-position: right;
+    background-repeat: no-repeat;
+    opacity: 0.2; /* Adjust the opacity as needed */
+    z-index: -1; /* Ensure the pseudo-element is behind the text */
+  }
+}
+
+
+
+
+.button {
+  display: inline-block;
+  font-size: 0.875rem; /* Equivalent to text-sm */
+  font-weight: 600; /* Equivalent to font-semibold */
+  line-height: 1.5rem; /* Equivalent to leading-6 */
+  color: #ffffff; /* Equivalent to text-gray-900 */
+  background-color: #1B1C57; /* Equivalent to bg-white */
+  border: 2px solid #000000; /* Equivalent to border-black */
+  border-radius: 50px; /* Equivalent to rounded-[0] */
+  padding: 0.25rem 0.75rem; /* Equivalent to py-2 px-3 */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button:hover {
+  border-color: #000000; /* Equivalent to hover:border-white */
+  background-color: #ffffff; /* Equivalent to hover:bg-black */
+  color: #000000; /* Equivalent to hover:text-white */
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(216, 215, 215, 0.2);
+  z-index: 1;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.button span {
+  position: relative;
+  z-index: 2;
+}
+
+.button1 {
+  display: inline-block;
+  color: #ffffff; /* Equivalent to text-gray-900 */
+  background-color: #1B1C57; /* Equivalent to bg-white */
+  border: 2px solid #000000; /* Equivalent to border-black */
+  border-radius: 50px; /* Equivalent to rounded-[0] */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button1:hover {
+  border-color: #000000; /* Equivalent to hover:border-white */
+  background-color: #ffffff; /* Equivalent to hover:bg-black */
+  color: #000000; /* Equivalent to hover:text-white */
+}
+
+.button1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(216, 215, 215, 0.2);
+  z-index: 1;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.button1:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.button1 span {
+  position: relative;
+  z-index: 2;
+}
+
+.button2 {
+  display: inline-block;
+  line-height: 1.5rem; /* Equivalent to leading-6 */
+  background-color: transparent; /* Equivalent to bg-white */
+  border: 2px solid #000000; /* Equivalent to border-black */
+  border-radius: 0; /* Equivalent to rounded-[0] */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button2:hover {
+  border-color: transparent; /* Equivalent to hover:border-white */
+  background-color: #000000; /* Equivalent to hover:bg-black */
+  color: #ffffff; /* Equivalent to hover:text-white */
+}
+
+.button2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.button2:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.button2 span {
+  position: relative;
+  z-index: 2;
+}
+
+
